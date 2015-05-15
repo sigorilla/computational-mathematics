@@ -1,0 +1,17 @@
+.idea/
+tmp/
+data.*
+
+*.sublime-*
+
+## Matlab files
+*.asv
+
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
