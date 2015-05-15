@@ -2,7 +2,7 @@
 
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[russian,english]{babel}
+\usepackage[english,russian]{babel}
 \usepackage{indentfirst}
 \usepackage{hyperref}
 \usepackage{amsmath,amsthm,amstext,amssymb,amscd}
@@ -66,37 +66,38 @@
 
 \begin{figure}
 	\centering
-	\includegraphics{1_u.eps}
-	\caption{Метод Якоби для шага $h=0.1$}\label{fig:u0.1}
+	\begin{subfigure}{\textwidth}
+		\includegraphics{1_u.eps}
+		\caption{Метод Якоби}\label{fig:u0.1}
+	\end{subfigure}
+	\begin{subfigure}{\textwidth}
+		\includegraphics{1_exact.eps}
+		\caption{Точное решение}\label{fig:e0.1}
+	\end{subfigure}
+	\caption{Шаг $h=0.1$}\label{fig:e0.1}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics{1_exact.eps}
-	\caption{Точное решение}\label{fig:e0.1}
+	\begin{subfigure}{\textwidth}
+		\includegraphics{01_u.eps}
+		\caption{Метод Якоби}\label{fig:u0.01}
+	\end{subfigure}
+	\begin{subfigure}{\textwidth}
+		\includegraphics{01_exact.eps}
+		\caption{Точное решение}\label{fig:e0.01}
+	\end{subfigure}
+	\caption{Шаг $h=0.01$}\label{fig:e0.01}
 \end{figure}
-
 
 \section{Заключение}
 \label{sec:summary}
 
+Из графиков видно, что метод Якоби хорошо приближает к точному решению. В моей имплиментации использовался язык программирования Python с библиотекой MatPlotLib для построения графиков. В программе можно сохранить результат в файл на диск, напечатать в терминале или же построить графики для самого метода и для точного решения задачи. \par
+Однако данный метод слишком ресурсоемкий, т.к. для шагов $h=0.001$ и $h=0.0001$ результаты получить более чем за 12 часов не удалось. Возможно проблема в неоптимальном алгоритме и нехватки мощности компьютера. Так например для шага $h=0.001$ требовалось более 3 Гб оперативной памяти.
 
 % На Рис.~\ref{fig:fig2} показано решение исходной задачи (раздел~\ref{sec:problem}) двухстадийным явным методом Рунге-Кутты (формула \ref{eq:runge-x2}). Сравнивая с Рис.~\ref{fig:fig1}, видно, что решения практически повторяют друг друга, а так как среде Matlab можно доверять, то и наше решение будет верным. \par
 % При уменьшении шага примерно до $h \simeq 0.1 $ двухстадийный метод становится непригодным для использования, а Matlab продолжает считать верно. \par
 
-% \begin{figure}
-%     \centering
-%     \begin{subfigure}[b]{\textwidth}
-%         \includegraphics{runge-matlab.eps}
-%         \caption{Решение задачи, используя встроенный метод Рунге-Кутты в среде Matlab}
-%         \label{fig:fig1}
-%     \end{subfigure}
-%     \begin{subfigure}[b]{\textwidth}
-%         % \includegraphics{runge-2x.eps}
-%         \caption{Решение задачи, используя двухстадийный явный метод Рунге-Кутты}
-%         \label{fig:fig2}
-%     \end{subfigure}
-%     \caption{Решения задачи}\label{fig:graph}
-% \end{figure}
 
 \end{document}

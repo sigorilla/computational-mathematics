@@ -91,7 +91,7 @@ class PoissonEquation(object):
         plt.figure(1)
         plt.contourf(X, Y, Z, levels=levels, cmap=cmap)
         plt.colorbar()
-        plt.title('Poisson Equation Solution (h = %.4f)' % self.step)
+        # plt.title('Poisson Equation Solution (h = %.4f)' % self.step)
         plt.xlabel('X')
         plt.ylabel('Y')
         self.__plot_exact()
@@ -114,7 +114,7 @@ class PoissonEquation(object):
         plt.figure(2)
         plt.contourf(X, Y, Z, levels=levels, cmap=cmap)
         plt.colorbar()
-        plt.title('Exact solution xy(1-x)(1-y)')
+        # plt.title('Exact solution xy(1-x)(1-y)')
         plt.xlabel('X')
         plt.ylabel('Y')
         plt.show()
@@ -131,7 +131,7 @@ def main():
 
     # poissonEquation.print_u()
     # poissonEquation.save_u()
-    # poissonEquation.plot_u()
+    poissonEquation.plot_u()
 
 
 if __name__ == '__main__':
